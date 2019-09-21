@@ -18,7 +18,7 @@
 // 返回ERROR表示ArrayList初始化失败，返回OK表示初始化成功
 int InitArrayList(ArrayList *p, int size)
 {
-	p->save_array = (ElementType)malloc(sizeof(ElementType) * size);
+	p->save_array = (ElementType *)malloc(sizeof(ElementType) * size);
 	if (p->save_array == NULL)
 	{
 		return ERROR;

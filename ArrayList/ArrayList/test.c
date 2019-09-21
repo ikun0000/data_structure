@@ -13,7 +13,7 @@
 #include <time.h>
 
 
-// ´Ë³ÌÐò½öÓÃÓÚ²âÊÔArrayList
+// 此函数用于测试ArrayList
 int main(int argc, char *argv[])
 {
 	ArrayList array_list;

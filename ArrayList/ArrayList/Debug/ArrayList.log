@@ -1,14 +1,19 @@
-﻿生成启动时间为 2019/9/21 12:46:09。
-     1>项目“F:\source\ArrayList\ArrayList\ArrayList.vcxproj”在节点 2 上(Build 个目标)。
+﻿生成启动时间为 2019/9/21 19:27:52。
+     1>项目“F:\data_structure\ArrayList\ArrayList\ArrayList.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
+         D:\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt arraylist.c test.c
          test.c
+     1>f:\data_structure\arraylist\arraylist\arraylist.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         arraylist.c
+     1>f:\data_structure\arraylist\arraylist\arraylist.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>f:\data_structure\arraylist\arraylist\arraylist.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         正在生成代码...
        Link:
-         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\source\ArrayList\Debug\ArrayList.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\source\ArrayList\Debug\ArrayList.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\source\ArrayList\Debug\ArrayList.lib" /MACHINE:X86 Debug\arraylist.obj
+         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\data_structure\ArrayList\Debug\ArrayList.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\data_structure\ArrayList\Debug\ArrayList.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\data_structure\ArrayList\Debug\ArrayList.lib" /MACHINE:X86 Debug\arraylist.obj
          Debug\test.obj
-         ArrayList.vcxproj -> F:\source\ArrayList\Debug\ArrayList.exe
-     1>已完成生成项目“F:\source\ArrayList\ArrayList\ArrayList.vcxproj”(Build 个目标)的操作。
+         ArrayList.vcxproj -> F:\data_structure\ArrayList\Debug\ArrayList.exe
+     1>已完成生成项目“F:\data_structure\ArrayList\ArrayList\ArrayList.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.31
+已用时间 00:00:00.44
