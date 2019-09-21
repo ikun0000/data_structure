@@ -2,7 +2,7 @@
 /* project name: ArrayList                          */
 /* create time: 2019-9-21                           */
 /* modify time: 2019-9-21                           */
-/* author: ikun000                                  */
+/* author: ikun0000                                 */
 /* version: v1.0                                    */
 /****************************************************/
 
@@ -10,12 +10,12 @@
 #include "arraylist.h"
 #include <stdlib.h>
 
-// ³õÊ¼»¯ArrayList
-// ²ÎÊı£º
-// p: ĞèÒª³õÊ¼»¯µÄArrayListµÄµØÖ·
-// size: ArrayListµÄ×ÜÈİÁ¿
-// ·µ»ØÖµ£º
-// ·µ»ØERROR±íÊ¾ArrayList³õÊ¼»¯Ê§°Ü£¬·µ»ØOK±íÊ¾³õÊ¼»¯³É¹¦
+// åˆå§‹åŒ–ArrayList
+// å‚æ•°ï¼š
+// p: éœ€è¦åˆå§‹åŒ–çš„ArrayListçš„åœ°å€
+// size: ArrayListçš„æ€»å®¹é‡
+// è¿”å›å€¼ï¼š
+// è¿”å›ERRORè¡¨ç¤ºArrayListåˆå§‹åŒ–å¤±è´¥ï¼Œè¿”å›OKè¡¨ç¤ºåˆå§‹åŒ–æˆåŠŸ
 int InitArrayList(ArrayList *p, int size)
 {
 	p->save_array = (ElementType)malloc(sizeof(ElementType) * size);
@@ -30,31 +30,31 @@ int InitArrayList(ArrayList *p, int size)
 }
 
 
-// Ïú»ÙArrayList
-// ²ÎÊı£º
-// p: ĞèÒªÏú»ÙµÄArrayListµÄµØÖ·
-// ·µ»ØÖµ£º
-// ´Ëº¯Êı²»»áÊ§°Ü
+// é”€æ¯ArrayList
+// å‚æ•°ï¼š
+// p: éœ€è¦é”€æ¯çš„ArrayListçš„åœ°å€
+// è¿”å›å€¼ï¼š
+// æ­¤å‡½æ•°ä¸ä¼šå¤±è´¥
 void DestroyArrayList(ArrayList *p)
 {
 	free(p->save_array);
 }
 
 
-// ÔÚÖ¸¶¨Î»ÖÃ²åÈëÒ»¸öÔªËØ
-// ²ÎÊı£º
-// p: ĞèÒªÏú»ÙµÄArrayListµÄµØÖ·
-// element: ²åÈëµÄÔªËØ
-// pos: ²åÈëµÄÎ»ÖÃ£¨´Ó1¿ªÊ¼£©
-// ·µ»ØÖµ£º
-// ²åÈë³É¹¦·µ»ØOK£¬·ñÔò·µ»ØERROR
+// åœ¨æŒ‡å®šä½ç½®æ’å…¥ä¸€ä¸ªå…ƒç´ 
+// å‚æ•°ï¼š
+// p: éœ€è¦é”€æ¯çš„ArrayListçš„åœ°å€
+// element: æ’å…¥çš„å…ƒç´ 
+// pos: æ’å…¥çš„ä½ç½®ï¼ˆä»1å¼€å§‹ï¼‰
+// è¿”å›å€¼ï¼š
+// æ’å…¥æˆåŠŸè¿”å›OKï¼Œå¦åˆ™è¿”å›ERROR
 int InsertElement(ArrayList *p, ElementType element, int pos)
 {
-	if (pos < 1 || pos > p->length + 1)    // ¼ì²éposµÄÓĞĞ§ĞÔ
+	if (pos < 1 || pos > p->length + 1)    // æ£€æŸ¥posçš„æœ‰æ•ˆæ€§
 	{
 		return ERROR;
 	}
-	if (p->length + 1 > p->size)           // ¼ì²éArrayListÊÇ·ñ»¹ÓĞ¿Õ¼ä
+	if (p->length + 1 > p->size)           // æ£€æŸ¥ArrayListæ˜¯å¦è¿˜æœ‰ç©ºé—´
 	{
 		return ERROR;
 	}
@@ -71,20 +71,20 @@ int InsertElement(ArrayList *p, ElementType element, int pos)
 }
 
 
-// É¾³ıÖ¸¶¨Î»ÖÃµÄÔªËØ
-// ²ÎÊı£º
-// p: ĞèÒªÏú»ÙµÄArrayListµÄµØÖ·
-// pos: É¾³ıµÄÎ»ÖÃ£¨´Ó1¿ªÊ¼£©
-// result: ´æ·ÅÉ¾³ıÔªËØµÄÖµµÄµØÖ·£¬¿ÉÒÔÎªNULL
-// ·µ»ØÖµ£º
-// É¾³ı³É¹¦·µ»ØOK£¬·ñÔò·µ»ØERROR
+// åˆ é™¤æŒ‡å®šä½ç½®çš„å…ƒç´ 
+// å‚æ•°ï¼š
+// p: éœ€è¦é”€æ¯çš„ArrayListçš„åœ°å€
+// pos: åˆ é™¤çš„ä½ç½®ï¼ˆä»1å¼€å§‹ï¼‰
+// result: å­˜æ”¾åˆ é™¤å…ƒç´ çš„å€¼çš„åœ°å€ï¼Œå¯ä»¥ä¸ºNULL
+// è¿”å›å€¼ï¼š
+// åˆ é™¤æˆåŠŸè¿”å›OKï¼Œå¦åˆ™è¿”å›ERROR
 int DeleteElement(ArrayList *p, int pos, ElementType *result)
 {
-	if (pos < 1 || pos > p->length + 1)    // ¼ì²éposµÄÓĞĞ§ĞÔ
+	if (pos < 1 || pos > p->length + 1)    // æ£€æŸ¥posçš„æœ‰æ•ˆæ€§
 	{
 		return ERROR;
 	}
-	if (p->length == 0)					   // ¼ì²éArrayListÊÇ·ñ»¹¿ÉÒÔÉ¾³ıÔªËØ
+	if (p->length == 0)					   // æ£€æŸ¥ArrayListæ˜¯å¦è¿˜å¯ä»¥åˆ é™¤å…ƒç´ 
 	{
 		return ERROR;
 	}
@@ -105,16 +105,16 @@ int DeleteElement(ArrayList *p, int pos, ElementType *result)
 }
 
 
-// »ñÈ¡Ö¸¶¨Î»ÖÃµÄÔªËØ
-// ²ÎÊı£º
-// p: ĞèÒªÏú»ÙµÄArrayListµÄµØÖ·
-// pos: É¾³ıµÄÎ»ÖÃ£¨´Ó1¿ªÊ¼£©
-// result: ´æ·ÅÉ¾³ıÔªËØµÄÖµµÄµØÖ·£¬¿ÉÒÔÎªNULL
-// ·µ»ØÖµ£º
-// É¾³ı³É¹¦·µ»ØOK£¬·ñÔò·µ»ØERROR
+// è·å–æŒ‡å®šä½ç½®çš„å…ƒç´ 
+// å‚æ•°ï¼š
+// p: éœ€è¦é”€æ¯çš„ArrayListçš„åœ°å€
+// pos: åˆ é™¤çš„ä½ç½®ï¼ˆä»1å¼€å§‹ï¼‰
+// result: å­˜æ”¾åˆ é™¤å…ƒç´ çš„å€¼çš„åœ°å€ï¼Œå¯ä»¥ä¸ºNULL
+// è¿”å›å€¼ï¼š
+// åˆ é™¤æˆåŠŸè¿”å›OKï¼Œå¦åˆ™è¿”å›ERROR
 int GetElement(ArrayList *p, int pos, ElementType *result)
 {
-	if (pos < 1 || pos > p->length + 1)    // ¼ì²éposµÄÓĞĞ§ĞÔ
+	if (pos < 1 || pos > p->length + 1)    // æ£€æŸ¥posçš„æœ‰æ•ˆæ€§
 	{
 		return ERROR;
 	}
@@ -128,17 +128,17 @@ int GetElement(ArrayList *p, int pos, ElementType *result)
 }
 
 
-// ĞŞ¸ÄÖÆ¶¨Î»ÖÃÔªËØµÄÖµ
-// ²ÎÊı£º
-// p: ĞèÒªÏú»ÙµÄArrayListµÄµØÖ·
-// newelement: ĞÂµÄÔªËØµÄÖµ
-// result: ´æ·ÅÉ¾³ıÔªËØµÄÖµµÄµØÖ·£¬¿ÉÒÔÎªNULL
-// pos: ĞŞ¸ÄµÄÎ»ÖÃ£¨´Ó1¿ªÊ¼£©
-// ·µ»ØÖµ£º
-// É¾³ı³É¹¦·µ»ØOK£¬·ñÔò·µ»ØERROR
+// ä¿®æ”¹åˆ¶å®šä½ç½®å…ƒç´ çš„å€¼
+// å‚æ•°ï¼š
+// p: éœ€è¦é”€æ¯çš„ArrayListçš„åœ°å€
+// newelement: æ–°çš„å…ƒç´ çš„å€¼
+// result: å­˜æ”¾åˆ é™¤å…ƒç´ çš„å€¼çš„åœ°å€ï¼Œå¯ä»¥ä¸ºNULL
+// pos: ä¿®æ”¹çš„ä½ç½®ï¼ˆä»1å¼€å§‹ï¼‰
+// è¿”å›å€¼ï¼š
+// åˆ é™¤æˆåŠŸè¿”å›OKï¼Œå¦åˆ™è¿”å›ERROR
 int ModifyElement(ArrayList *p, ElementType newelement, ElementType *result, int pos)
 {
-	if (pos < 1 || pos > p->length + 1)    // ¼ì²éposµÄÓĞĞ§ĞÔ
+	if (pos < 1 || pos > p->length + 1)    // æ£€æŸ¥posçš„æœ‰æ•ˆæ€§
 	{
 		return ERROR;
 	}
@@ -153,22 +153,22 @@ int ModifyElement(ArrayList *p, ElementType newelement, ElementType *result, int
 }
 
 
-// »ñÈ¡ArrayListµÄlength
-// ²ÎÊı£º
-// p: ĞèÒª»ñÈ¡lengthµÄArrayListµÄµØÖ·
-// ·µ»ØÖµ£º
-// ArrayListµÄlength
+// è·å–ArrayListçš„length
+// å‚æ•°ï¼š
+// p: éœ€è¦è·å–lengthçš„ArrayListçš„åœ°å€
+// è¿”å›å€¼ï¼š
+// ArrayListçš„length
 int GetLength(ArrayList *p)
 {
 	return p->length;
 }
 
 
-// Çå³ıArrayList
-// ²ÎÊı£º
-// p: ĞèÒªÇå³ıµÄArrayListµÄµØÖ·
-// ·µ»ØÖµ£º
-// ´Ëº¯Êı²»»áÊ§°Ü
+// æ¸…é™¤ArrayList
+// å‚æ•°ï¼š
+// p: éœ€è¦æ¸…é™¤çš„ArrayListçš„åœ°å€
+// è¿”å›å€¼ï¼š
+// æ­¤å‡½æ•°ä¸ä¼šå¤±è´¥
 void ClearArrayList(ArrayList *p)
 {
 	p->length = 0;
