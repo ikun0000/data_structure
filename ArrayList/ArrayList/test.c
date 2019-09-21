@@ -2,7 +2,7 @@
 /* project name: ArrayList                          */
 /* create time: 2019-9-21                           */
 /* modify time: 2019-9-21                           */
-/* author: ikun000                                  */
+/* author: ikun0000                                 */
 /* version: v1.0                                    */
 /****************************************************/
 
@@ -13,7 +13,7 @@
 #include <time.h>
 
 
-// 此程序仅用于测试ArrayList
+// 麓脣鲁脤脨貌陆枚脫脙脫脷虏芒脢脭ArrayList
 int main(int argc, char *argv[])
 {
 	ArrayList array_list;
