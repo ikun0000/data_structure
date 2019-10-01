@@ -1,5 +1,5 @@
 /************************************************/
-/* project name: StaticList                     */
+/* project name: Stack                          */
 /* create time: 2019-9-30                       */
 /* modify time: 2019-9-30                       */
 /* author: ikun0000                             */
