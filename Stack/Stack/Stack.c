@@ -74,7 +74,7 @@ Status push(Stack *p, ElementType element)
 // 从栈中弹出数据
 // 参数：
 // p: Stack的地址
-// result: 接收弹出的数据的变量的地址
+// result: 接收弹出的数据的变量的地址，可以为NULL
 // 返回值：
 // 成功返回OK，否则返回ERROR
 Status pop(Stack *p, ElementType *result)
@@ -85,7 +85,10 @@ Status pop(Stack *p, ElementType *result)
 	}
 
 	p->top -= 1;
-	*result = p->base[p->top];
+	if (result != NULL)
+	{
+		*result = p->base[p->top];
+	}
 
 	return OK;
 }

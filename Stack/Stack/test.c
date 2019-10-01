@@ -42,6 +42,36 @@ int main()
 	printf("| length: %d\n", GetLength(&st));
 
 
+	push(&st, 11);
+	push(&st, 22);
+	push(&st, 33);
+	pop(&st, NULL);
+	push(&st, 44);
+	push(&st, 55);
+	pop(&st, NULL);
+	push(&st, 66);
+	push(&st, 77);
+	push(&st, 88);
+	printf("| length: %d\n", GetLength(&st));
+	// 88 77 66 44 22 11
+	while (pop(&st, &result) == OK)
+	{
+		printf("%d\t", result);
+	}
+	printf("| length: %d\n", GetLength(&st));
+
+	for (i = 0; i < 9; i++)
+	{
+		int k = rand() % 100;
+
+		push(&st, k);
+
+		printf("%d\t", k);
+	}
+	printf("| length: %d\n", GetLength(&st));
+	ClearStack(&st);
+	printf("| length: %d\n", GetLength(&st));
+
 	DestroyStack(&st);
 
 	getchar();
